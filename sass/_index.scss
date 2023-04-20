@@ -1,0 +1,152 @@
+.gridContainerIndex {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    margin: 20px auto;
+
+    .articleIndex {
+        margin: 20px auto;
+
+        img {
+            width: 90%;
+            border: 4px solid #e0e0e0;
+            border-radius: 8px;
+            box-shadow: 5px 5px 5px black;
+            margin: 0 1rem;
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            color: #e0e0e0;
+            font-size: 3rem;
+            text-align: center;
+        }
+    }
+}
+
+.dukiMain:hover {
+    background-color: blue;
+}
+
+.neoMain:hover {
+    background-color: green;
+}
+
+.ysyMain:hover {
+    background-color: orange;
+}
+
+/* Animaciones, tuve que duplicarla para cada imagen porque no pude lograr darle box-shadow color distinto*/
+.flotarD {
+    animation: flotarD 6s ease infinite;
+}
+
+@keyframes flotarD {
+    0% {
+        transform: translate(0);
+    }
+
+    50% {
+        transform: translate(15px, 5px);
+        box-shadow: 10px 10px 10px orange;
+    }
+}
+
+.flotarN {
+    animation: flotarN 6s ease infinite;
+}
+
+@keyframes flotarN {
+    0% {
+        transform: translate(0);
+    }
+
+    50% {
+        transform: translate(15px, 5px);
+        box-shadow: 10px 10px 10px blue;
+    }
+}
+
+.flotarY {
+    animation: flotarY 6s ease infinite;
+}
+
+@keyframes flotarY {
+    0% {
+        transform: translate(0);
+    }
+
+    50% {
+        transform: translate(15px, 5px);
+        box-shadow: 10px 10px 10px green;
+    }
+}
+
+.neoMain {
+    animation-delay: 1s;
+}
+
+.ysyMain {
+    animation-delay: 2s;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .articleIndex {
+        grid-column: span 3;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .gridContainerIndex h1 {
+        font-size: 3em;
+    }
+
+    .gridContainerIndex .articleIndex div h2 {
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
+
+    .articleIndex {
+        display: block;
+        margin: 0 20px;
+    }
+
+    @keyframes flotarD {
+        0% {
+            transform: translate(0);
+        }
+
+        50% {
+            transform: translate(3px, 3px);
+            box-shadow: 3px 3px 3px orange;
+        }
+    }
+
+    @keyframes flotarN {
+        0% {
+            transform: translate(0);
+        }
+
+        50% {
+            transform: translate(3px, 3px);
+            box-shadow: 3px 3px 3px blue;
+        }
+    }
+
+    @keyframes flotarY {
+        0% {
+            transform: translate(0);
+        }
+
+        50% {
+            transform: translate(3px, 3px);
+            box-shadow: 3px 3px 3px green;
+        }
+    }
+
+}

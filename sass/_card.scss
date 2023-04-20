@@ -1,0 +1,15 @@
+.container-fluid{
+    grid-column: span 3;
+    .card{
+        .card-body{
+            background-color: rgb(51, 0, 0);   
+            .card-title{
+                color: white;
+                font-weight: bolder;
+            } 
+            .card-text{
+                color:white;
+            }
+        }
+    }
+}

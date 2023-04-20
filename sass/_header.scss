@@ -1,0 +1,158 @@
+/* BOX BARRA DE NAVEGACION */
+.topNav {
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem;
+    padding-left: 20px;
+    align-items: center;
+    justify-content: space-between;
+
+    .inicio {
+        padding: 0.75rem;
+        margin: 0.5rem;
+        border: 1px solid white;
+        box-shadow: 2px 2px 2px black;
+        border-radius: 5px;
+        transition-duration: 0.4s;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        margin: auto;
+        margin-right: 20px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+
+        li {
+            overflow: hidden;
+            padding: 0.5rem;
+            border: 1px solid white;
+            box-shadow: 2px 2px 2px black;
+            border-radius: 5%;
+            margin: 0.3rem;
+            background: linear-gradient(red, black);
+            font-size: 1.5rem;
+            font-weight: bolder;
+            text-align: center;
+    
+            a {
+                color: white;
+            }
+        }
+    }
+}
+.boton{
+    width: 10rem;
+    height: 4rem;
+    transition-duration: 0.7s;
+}
+.menu li:hover, .inicio:hover {
+    box-shadow: 5px 5px 5px black;
+    translate: 3px 3px;
+    background-image: linear-gradient(to top, red, black);
+    opacity: 0.5;
+}
+
+
+
+/* MENU HAMBURGUESA BOX*/
+.menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CHECKBOX INVISIBLE PARA HACER EL TRUCO */
+#menuDesplegable {
+    display: none;
+}
+
+/* MENU HAMBURGUESA "ICONO" */
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+    display: block;
+    background-color: white;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+}
+
+/* BARRA SUPERIOR DE HAMBURGUESA */
+.menu-button::before {
+    content: '';
+    margin-top: -8px;
+}
+
+/* BARRA INFERIOR DE HAMBURGUESA */
+.menu-button::after {
+    content: '';
+    margin-top: 8px;
+}
+
+/* BARRA SUPERIOR DE MENU HAMBURGUESA PARA CERRAR */
+#menuDesplegable:checked+.menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(45deg);
+}
+
+/* BARRA MEDIA DE MENU HAMBURGUESA "DESAPARECE" PARA CERRAR */
+#menuDesplegable:checked+.menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+}
+
+/* BARRA INFERIOR DE MENU HAMBURGUESA PARA CERRAR */
+#menuDesplegable:checked+.menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-45deg);
+}
+
+@media screen and (min-width: 851px) and (max-width: 1190px) {
+    .boton{
+        width: 11rem;
+    }
+}
+@media screen and (min-width: 915px) and (max-width: 1190px) {
+    .boton{
+        width: 14rem;
+    }
+}
+@media (max-width: 425px) {
+    .menu-button-container {
+        display: flex;
+        margin-right: 20px;
+    }
+
+    .topNav .menu {
+        display: flex;
+        flex-direction: column;
+        margin-right: 0px;
+        position: absolute;
+        top: 75px;
+        right: 10px;
+    }
+
+    #menuDesplegable~.menu li {
+        visibility: hidden ;
+        height: 2.5em;
+        width: 8rem;
+        margin-bottom: 0;
+        font-size: 20px;
+    }
+
+    #menuDesplegable:checked~.menu li {
+        visibility: visible;
+        height: 2.5em;
+        width: 8rem;
+        margin-bottom: 0;
+        font-size: 20px;
+    }
+}

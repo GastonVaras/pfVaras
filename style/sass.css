@@ -1,0 +1,413 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background: linear-gradient(to top, black, red) no-repeat;
+  max-width: 1400px;
+  margin: 0px auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  margin: 20px auto;
+}
+
+.redes {
+  justify-items: center;
+}
+.redes p {
+  grid-column: span 3;
+}
+.redes a {
+  grid-column: span 1;
+}
+
+footer hr {
+  color: white;
+  opacity: 1;
+  box-shadow: 0px 5px 5px red;
+}
+
+/* BOX BARRA DE NAVEGACION */
+.topNav {
+  display: flex;
+  flex-direction: row;
+  padding: 0.5rem;
+  padding-left: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+.topNav .inicio {
+  padding: 0.75rem;
+  margin: 0.5rem;
+  border: 1px solid white;
+  box-shadow: 2px 2px 2px black;
+  border-radius: 5px;
+  transition-duration: 0.4s;
+}
+.topNav .menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: auto;
+  margin-right: 20px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.topNav .menu li {
+  overflow: hidden;
+  padding: 0.5rem;
+  border: 1px solid white;
+  box-shadow: 2px 2px 2px black;
+  border-radius: 5%;
+  margin: 0.3rem;
+  background: linear-gradient(red, black);
+  font-size: 1.5rem;
+  font-weight: bolder;
+  text-align: center;
+}
+.topNav .menu li a {
+  color: white;
+}
+
+.boton {
+  width: 10rem;
+  height: 4rem;
+  transition-duration: 0.7s;
+}
+
+.menu li:hover, .inicio:hover {
+  box-shadow: 5px 5px 5px black;
+  translate: 3px 3px;
+  background-image: linear-gradient(to top, red, black);
+  opacity: 0.5;
+}
+
+/* MENU HAMBURGUESA BOX*/
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CHECKBOX INVISIBLE PARA HACER EL TRUCO */
+#menuDesplegable {
+  display: none;
+}
+
+/* MENU HAMBURGUESA "ICONO" */
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: white;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+/* BARRA SUPERIOR DE HAMBURGUESA */
+.menu-button::before {
+  content: "";
+  margin-top: -8px;
+}
+
+/* BARRA INFERIOR DE HAMBURGUESA */
+.menu-button::after {
+  content: "";
+  margin-top: 8px;
+}
+
+/* BARRA SUPERIOR DE MENU HAMBURGUESA PARA CERRAR */
+#menuDesplegable:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(45deg);
+}
+
+/* BARRA MEDIA DE MENU HAMBURGUESA "DESAPARECE" PARA CERRAR */
+#menuDesplegable:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+/* BARRA INFERIOR DE MENU HAMBURGUESA PARA CERRAR */
+#menuDesplegable:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-45deg);
+}
+
+@media screen and (min-width: 851px) and (max-width: 1190px) {
+  .boton {
+    width: 11rem;
+  }
+}
+@media screen and (min-width: 915px) and (max-width: 1190px) {
+  .boton {
+    width: 14rem;
+  }
+}
+@media (max-width: 425px) {
+  .menu-button-container {
+    display: flex;
+    margin-right: 20px;
+  }
+  .topNav .menu {
+    display: flex;
+    flex-direction: column;
+    margin-right: 0px;
+    position: absolute;
+    top: 75px;
+    right: 10px;
+  }
+  #menuDesplegable ~ .menu li {
+    visibility: hidden;
+    height: 2.5em;
+    width: 8rem;
+    margin-bottom: 0;
+    font-size: 20px;
+  }
+  #menuDesplegable:checked ~ .menu li {
+    visibility: visible;
+    height: 2.5em;
+    width: 8rem;
+    margin-bottom: 0;
+    font-size: 20px;
+  }
+}
+h1 {
+  grid-column: span 3;
+  font-size: 5rem;
+  text-align: center;
+  background: linear-gradient(to right, rgb(0, 0, 0), rgb(255, 0, 0));
+  color: #e0e0e0;
+  border: 3px solid #e0e0e0;
+  border-radius: 6px;
+  margin: 0px 20px;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  height: auto;
+}
+
+@media screen and (max-width: 425px) {
+  h1 {
+    grid-column: span 3;
+    font-size: 5rem;
+    text-align: center;
+    background: linear-gradient(to right, rgb(0, 0, 0), rgb(255, 0, 0));
+    color: #e0e0e0;
+    border: 3px solid #e0e0e0;
+    border-radius: 6px;
+    margin: 0px 20px;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    height: auto;
+    font-size: 3rem;
+  }
+}
+h2 {
+  grid-column: span 3;
+  width: 70%;
+  margin: 0px auto;
+  font-size: 2rem;
+  text-align: center;
+  height: 4rem;
+  color: #e0e0e0;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  box-shadow: 3px 3px 3px black;
+}
+
+p {
+  color: #e0e0e0;
+  padding: 1rem;
+}
+
+.gridContainerIndex {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  margin: 20px auto;
+}
+.gridContainerIndex .articleIndex {
+  margin: 20px auto;
+}
+.gridContainerIndex .articleIndex img {
+  width: 90%;
+  border: 4px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 5px 5px 5px black;
+  margin: 0 1rem;
+  margin-bottom: 2rem;
+}
+.gridContainerIndex .articleIndex h2 {
+  color: #e0e0e0;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.dukiMain:hover {
+  background-color: blue;
+}
+
+.neoMain:hover {
+  background-color: green;
+}
+
+.ysyMain:hover {
+  background-color: orange;
+}
+
+/* Animaciones, tuve que duplicarla para cada imagen porque no pude lograr darle box-shadow color distinto*/
+.flotarD {
+  animation: flotarD 6s ease infinite;
+}
+
+@keyframes flotarD {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(15px, 5px);
+    box-shadow: 10px 10px 10px orange;
+  }
+}
+.flotarN {
+  animation: flotarN 6s ease infinite;
+}
+
+@keyframes flotarN {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(15px, 5px);
+    box-shadow: 10px 10px 10px blue;
+  }
+}
+.flotarY {
+  animation: flotarY 6s ease infinite;
+}
+
+@keyframes flotarY {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translate(15px, 5px);
+    box-shadow: 10px 10px 10px green;
+  }
+}
+.neoMain {
+  animation-delay: 1s;
+}
+
+.ysyMain {
+  animation-delay: 2s;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .articleIndex {
+    grid-column: span 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 425px) {
+  .gridContainerIndex h1 {
+    font-size: 3em;
+  }
+  .gridContainerIndex .articleIndex div h2 {
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+  .articleIndex {
+    display: block;
+    margin: 0 20px;
+  }
+  @keyframes flotarD {
+    0% {
+      transform: translate(0);
+    }
+    50% {
+      transform: translate(3px, 3px);
+      box-shadow: 3px 3px 3px orange;
+    }
+  }
+  @keyframes flotarN {
+    0% {
+      transform: translate(0);
+    }
+    50% {
+      transform: translate(3px, 3px);
+      box-shadow: 3px 3px 3px blue;
+    }
+  }
+  @keyframes flotarY {
+    0% {
+      transform: translate(0);
+    }
+    50% {
+      transform: translate(3px, 3px);
+      box-shadow: 3px 3px 3px green;
+    }
+  }
+}
+.container-fluid {
+  grid-column: span 3;
+}
+.container-fluid .card .card-body {
+  background-color: rgb(51, 0, 0);
+}
+.container-fluid .card .card-body .card-title {
+  color: white;
+  font-weight: bolder;
+}
+.container-fluid .card .card-body .card-text {
+  color: white;
+}
+
+.gridContainerPages {
+  grid-column: span 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  max-width: 1400px;
+  margin: 20px auto;
+}
+.gridContainerPages .articlePage {
+  grid-column: span 3;
+  margin: 20px auto;
+}
+.gridContainerPages .articlePage h2 {
+  width: 80%;
+  height: 3rem;
+}
+.gridContainerPages .articlePage p {
+  grid-column: span 3;
+  font-size: 1.2rem;
+}/*# sourceMappingURL=sass.css.map */
