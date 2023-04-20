@@ -1,0 +1,303 @@
+.gridContainerGaleria{
+    grid-column: span 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(7,250px);
+    gap: 30px;
+    margin: 0px auto;
+    padding: 20px;
+    .uno{
+        grid-column: 1 / 3;
+        grid-row: 1 / 3;
+        overflow: hidden;
+        
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .dos{
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+        overflow: hidden;
+        img{
+            width: 100%;
+            height: 100%;
+            
+        }
+    }
+    .tres{
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+        overflow: hidden;
+        img{
+            width: 100%;
+        }
+    }
+    .cuatro{
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+        overflow: hidden;
+        img{
+            width: 100%;
+        }
+    }
+    .cinco{
+        grid-column: 2 / 4;
+        grid-row: 3 / 5;
+        overflow: hidden;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .seis{
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+        overflow: hidden;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .siete{
+        grid-column: 1 / 3;
+        grid-row: 5 / 7;
+        overflow: hidden;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .ocho{
+        grid-column: 3 / 4;
+        grid-row: 5 / 6;
+        overflow: hidden;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .nueve{
+        grid-column: 3 / 4;
+        grid-row: 6 / 8;
+        overflow: hidden;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .diez{
+        grid-column: 1 / 2;
+        grid-row: 7 / 8;
+        overflow: hidden;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+@media screen and (max-width:1024px){
+    .h1galeria{
+        margin: 20px 20px;
+    }
+}
+
+@media screen and (max-width:768px){
+    .gridContainerGaleria{
+        grid-template-rows: repeat(9,200px);
+        .uno{
+            grid-column: 1 / 4;
+            grid-row: 1 / 3;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .dos{
+            grid-column: 1 / 3;
+            grid-row: 3 / 4;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: 100%;
+                
+            }
+        }
+        .tres{
+            grid-column: 3 / 4;
+            grid-row: 3 / 4;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .cuatro{
+            grid-column: 1 / 2;
+            grid-row: 4 / 5;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .cinco{
+            grid-column: 2 / 4;
+            grid-row: 4 / 5;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .seis{
+            grid-column: 1 / 4;
+            grid-row: 5 / 7;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .siete{
+            grid-column: 1 / 3;
+            grid-row: 7 / 8;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .ocho{
+            grid-column: 3 / 4;
+            grid-row: 7 / 8;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .nueve{
+            grid-column: 1 / 2;
+            grid-row: 8 / 10;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .diez{
+            grid-column: 2 / 4;
+            grid-row: 8 / 10;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:425px){
+    .gridContainerGaleria{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        .uno{
+            grid-column: 1 / 3;
+            grid-row: 1 / 2;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: 100%;
+                
+            }
+        }
+        .dos{
+            grid-column: 1 / 3;
+            grid-row: 2 / 3;
+            overflow: hidden;
+            img{
+                width: 100%;
+                
+                
+            }
+        }
+        .tres{
+            grid-column: 1 / 3;
+            grid-row: 3 / 4;
+            overflow: hidden;
+            img{
+                width: 100%;
+                
+            }
+        }
+        .cuatro{
+            grid-column: 1 / 3;
+            grid-row: 4 / 5;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .cinco{
+            grid-column: 1 / 3;
+            grid-row: 5 / 6;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .seis{
+            grid-column: 1 / 3;
+            grid-row: 6 / 7;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .siete{
+            grid-column: 1 / 3;
+            grid-row: 7 / 8;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .ocho{
+            grid-column: 1 / 3;
+            grid-row: 8 / 9;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .nueve{
+            grid-column: 1 / 3;
+            grid-row: 9 / 10;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .diez{
+            grid-column: 1 / 3;
+            grid-row: 10 / 11;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
