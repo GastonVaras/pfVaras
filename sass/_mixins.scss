@@ -13,37 +13,38 @@
 }
 
 h1 {
-@include tituloh1;
-}
-@media screen and (max-width: 425px) {
-h1 {
     @include tituloh1;
-    font-size: 3rem;
-}   
+}
+
+@media screen and (max-width: 425px) {
+    h1 {
+        @include tituloh1;
+        font-size: 3rem;
+    }
 }
 
 @mixin tituloh2 {
-grid-column: span 3;
-width: 70%;
-margin: 0px auto;
-font-size: 2rem;
-text-align: center;
-height: 4rem;
-color: #e0e0e0;
-border: 1px solid #e0e0e0;
-border-radius: 6px;
-box-shadow: 3px 3px 3px black;
+    grid-column: span 3;
+    width: 70%;
+    margin: 0px auto;
+    font-size: 2rem;
+    text-align: center;
+    height: 4rem;
+    color: #e0e0e0;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    box-shadow: 3px 3px 3px black;
 }
 
 h2 {
-@include tituloh2;
+    @include tituloh2;
 }
 
 @mixin parrafo {
-color: #e0e0e0;
-padding: 1rem;
+    color: #e0e0e0;
+    padding: 1rem;
 }
 
 p {
-@include parrafo;
+    @include parrafo;
 }

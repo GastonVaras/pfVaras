@@ -82,6 +82,7 @@ footer hr {
   font-size: 1.5rem;
   font-weight: bolder;
   text-align: center;
+  z-index: 20;
 }
 .topNav .menu li a {
   color: white;
@@ -410,4 +411,44 @@ p {
 .gridContainerPages .articlePage p {
   grid-column: span 3;
   font-size: 1.2rem;
+}
+
+@media screen and (max-width: 425px) {
+  .gridContainerPages .articlePage h2 {
+    height: 3rem;
+    width: 12rem;
+  }
+}
+h3 {
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+  margin-top: 1rem;
+}
+h3 img {
+  margin: 0px 0.5rem;
+  width: 80%;
+  cursor: pointer;
+}
+
+.gridContainer article p {
+  font-size: 1rem;
+}
+.gridContainer article h2 {
+  font-size: 2rem;
+  height: 3rem;
+}
+
+/* En movil se hace un choclo de texto, asique decidi dejar solo las tapas de los discos*/
+@media screen and (max-width: 425px) {
+  .gridContainer article {
+    font-size: 1.5rem;
+    grid-column: span 3;
+  }
+  .gridContainer article h2 {
+    height: 3rem;
+  }
+  .gridContainer article .pDisc {
+    display: none;
+  }
 }/*# sourceMappingURL=sass.css.map */

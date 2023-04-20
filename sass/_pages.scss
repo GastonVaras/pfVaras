@@ -9,13 +9,24 @@
     .articlePage {
         grid-column: span 3;
         margin: 20px auto;
-        h2{
+
+        h2 {
             width: 80%;
             height: 3rem;
         }
+
         p {
             grid-column: span 3;
             font-size: 1.2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .gridContainerPages .articlePage {
+        h2 {
+            height: 3rem;
+            width: 12rem;
         }
     }
 }

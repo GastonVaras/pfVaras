@@ -1,0 +1,34 @@
+h3 {
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    margin-top: 1rem;
+    img{
+        margin: 0px 0.5rem;
+        width: 80%;
+        cursor: pointer;
+    }
+}
+.gridContainer article {
+    p{
+        font-size: 1rem;
+    }
+    h2{
+        font-size: 2rem;
+        height: 3rem;
+    }
+}
+/* En movil se hace un choclo de texto, asique decidi dejar solo las tapas de los discos*/
+@media screen and (max-width: 425px) {
+    .gridContainer article {
+        font-size: 1.5rem;
+        h2{
+            height: 3rem;
+        }
+        grid-column: span 3;
+        .pDisc{
+            display: none;
+        }
+    }
+    
+}
